@@ -1,0 +1,124 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/32/1a/05/321a052dbafe29e84e5bae129a0f602e.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.jumbotron {
+    border: 1px solid #343a40;
+    box-shadow: 3px 3px 10px;
+    margin-bottom: 0;
+}
+
+#superfan {
+    background-color: #F01212;
+    font-family: 'Righteous', cursive;
+}
+
+.nav-link {
+    font-family: 'Righteous', cursive;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    background-color: #F01212;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#superfan-jumbotron {
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 10px;
+}
+
+#scoreboard-header {
+    text-align: center;
+    color: #e9ecef;
+    background-color: #343a40;
+    padding: 15px;
+    margin-bottom: 0;
+    border: 1px solid #e9ecef;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 3px 3px 10px black;
+}
+
+#scoreboard {
+    box-shadow: 3px 3px 10px black;
+    border: 1px solid #e9ecef;
+}
+
+.logo {
+    height: 150px;
+    width: 150px;
+}
+
+.seatgeek-content, #team-logo {
+    /* color: black; */
+    text-align: center;
+    color: #e9ecef;
+    background-color: #343a40;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 10px black;
+    line-height: 45%;
+}
+
+#articles, #top-headlines {
+    color: #e9ecef;
+    background-color: #343a40;
+    margin-bottom: auto;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    /* padding: 15px;    */
+    box-shadow: 3px 3px 10px black;
+    line-height: 150%;
+}
+
+#articles {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.article-content, #article-header {
+    padding: 15px;
+}
+
+.mt-0 {
+    font-family: 'Arvo', serif;
+}
+
+.footer {
+    text-align: center;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+.media:hover {
+    cursor: pointer;
+}
+
+fa-instagram {
+    size: 60px;
+}
+
+#top-headlines {
+    margin: 40px;
+}
+
+#team-logo {
+    text-align: center;
+    color: black;
+    font-family: "Roboto-Condensed", arial;
+    width: auto;
+    color: #e9ecef;
+    background-color: #343a40;
+}

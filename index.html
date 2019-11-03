@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Exo+2|Noto+Sans+JP|Rajdhani|Righteous|Roboto&display=swap"
+        rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Gridiron Report</title>
+</head>
+
+<body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="teamSelect" tabindex="-1" role="dialog" aria-labelledby="teamSelectLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="teamSelectLabel">What team are you looking for?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="btn-group">
+
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                id="team-selection">Select Your Team!<span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu scrollable-menu" role="menu">
+                                <a class="dropdown-item" href="#" abbr="ARI" img="assets/images/arizona.png">Arizona
+                                    Cardinals</a>
+                                <a class="dropdown-item" href="#" abbr="ATL" img="assets/images/atlanta.png">Atlanta
+                                    Falcons</a>
+                                <a class="dropdown-item" href="#" abbr="BAL" img="assets/images/baltimore.png">Baltimore
+                                    Ravens</a>
+                                <a class="dropdown-item" href="#" abbr="BUF" img="assets/images/buffalo.png">Buffalo
+                                    Bills</a>
+                                <a class="dropdown-item" href="#" abbr="CAR" img="assets/images/carolina.png">Carolina
+                                    Panthers</a>
+                                <a class="dropdown-item" href="#" abbr="CHI" img="assets/images/chicago.png">Chicago
+                                    Bears</a>
+                                <a class="dropdown-item" href="#" abbr="CIN"
+                                    img="assets/images/cincinnati.png">Cincinnati
+                                    Bengals</a>
+                                <a class="dropdown-item" href="#" abbr="CLE" img="assets/images/cleveland.png">Cleveland
+                                    Browns</a>
+                                <a class="dropdown-item" href="#" abbr="DAL" img="assets/images/dallas.png">Dallas
+                                    Cowboys</a>
+                                <a class="dropdown-item" href="#" abbr="DEN" img="assets/images/denver.png">Denver
+                                    Broncos</a>
+                                <a class="dropdown-item" href="#" abbr="DET" img="assets/images/detroit.png">Detroit
+                                    Lions</a>
+                                <a class="dropdown-item" href="#" abbr="GB" img="assets/images/greenbay.png">Green Bay
+                                    Packers</a>
+                                <a class="dropdown-item" href="#" abbr="HOU" img="assets/images/houston.png">Houston
+                                    Texans</a>
+                                <a class="dropdown-item" href="#" abbr="IND" img="assets/images/indy.png">Indianapolis
+                                    Colts</a>
+                                <a class="dropdown-item" href="#" abbr="JAX"
+                                    img="assets/images/jacksonville.png">Jacksonville
+                                    Jaguars</a>
+                                <a class="dropdown-item" href="#" abbr="KC" img="assets/images/kansas.png">Kansas City
+                                    Chiefs</a>
+                                <a class="dropdown-item" href="#" abbr="SD" img="assets/images/lachargers.png">Los
+                                    Angeles
+                                    Chargers</a>
+                                <a class="dropdown-item" href="#" abbr="STL" img="assets/images/larams.png">Los Angeles
+                                    Rams</a>
+                                <a class="dropdown-item" href="#" abbr="MIA" img="assets/images/miami.png">Miami
+                                    Dolphins</a>
+                                <a class="dropdown-item" href="#" abbr="MIN" img="assets/images/minnesota.png">Minnesota
+                                    Vikings</a>
+                                <a class="dropdown-item" href="#" abbr="NE" img="assets/images/newengland.png">New
+                                    England
+                                    Patriots</a>
+                                <a class="dropdown-item" href="#" abbr="NO" img="assets/images/neworleans.png">New
+                                    Orleans Saints</a>
+                                <a class="dropdown-item" href="#" abbr="NYG" img="assets/images/nyg.png">New York
+                                    Giants</a>
+                                <a class="dropdown-item" href="#" abbr="NYJ" img="assets/images/nyj.png">New York
+                                    Jets</a>
+                                <a class="dropdown-item" href="#" abbr="OAK" img="assets/images/oakland.png">Oakland
+                                    Raiders</a>
+                                <a class="dropdown-item" href="#" abbr="PHI" img="assets/images/philly.png">Philadelphia
+                                    Eagles</a>
+                                <a class="dropdown-item" href="#" abbr="PIT"
+                                    img="assets/images/pittsburgh.png">Pittsburgh
+                                    Steelers</a>
+                                <a class="dropdown-item" href="#" abbr="SF" img="assets/images/sanfran.png">San
+                                    Francisco
+                                    49ers</a>
+                                <a class="dropdown-item" href="#" abbr="SEA" img="assets/images/seattle.png">Seattle
+                                    Seahawks</a>
+                                <a class="dropdown-item" href="#" abbr="TB" img="assets/images/tampa.png">Tampa Bay
+                                    Buccaneers</a>
+                                <a class="dropdown-item" href="#" abbr="TEN" img="assets/images/Tennessee.png">Tennessee
+                                    Titans</a>
+                                <a class="dropdown-item" href="#" abbr="WAS" img="assets/images/wash.png">Washington
+                                    Redskins</a>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-dark" id="team-submit" data-dismiss="modal">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#" id="superfan">Gridiron Report</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="news.html" id="news">News<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Favorites
+                    </a>
+                    <div class="dropdown-menu" id="favorites-dropdown" aria-labelledby="navbarDropdown">
+                        <!-- list of favorite teams -->
+                    </div>
+                    <span class="media">
+                <li><a href="https://instagram.com/" target="_blank"><i class="fa fa-instagram"
+                            style="font-size:25px;color:white;padding:5px"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"
+                            style="font-size:25px;color:white;padding:5px"></i></a></li>
+                </span>
+            </ul>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- jumbotron -->
+    <div class="container">
+        <div class="jumbotron collapse.show" id="jumbo">
+            <h1 class="display-4" id="superfan-jumbotron">Gridiron Report</h1>
+            <p class="lead">Welcome to Gridiron Report, your one-stop-shop for all things related to your favorite NFL
+                teams! See how your team did, shop for tickets, and check out the latest team-specific and leaguewide
+                headlines!</p>
+            <hr class="my-4">
+            <p>Click the button below to get started!</p>
+            <!-- Button trigger modal -->
+            <div class="container">
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#teamSelect">
+                    Select a Team!
+                </button>
+            </div>
+            <h2></h2>
+        </div>
+    </div>
+    <!-- end jumbotron -->
+    <div class="container">
+        <a class="btn btn-secondary" data-toggle="collapse" href="#jumbo" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Show/Hide Banner
+        </a>
+    </div>
+
+    <h2></h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div id="team-logo"></div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div id="scoreboard-div">
+                    <h3 id="scoreboard-header">Last Matchup:</h3>
+                    <table class="table table-striped table-dark" id="scoreboard">
+                        <thead class="thead-dark">
+                            <tr id="qtr-headers">
+                                <th scope="col"></th>
+                                <th scope="col">Q1</th>
+                                <th scope="col">Q2</th>
+                                <th scope="col">Q3</th>
+                                <th scope="col">Q4</th>
+                                <th scope="col">FINAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="away-qtrs">
+                                <th scope="row" id="away-abbr"></th>
+                            </tr>
+                            <tr id="home-qtrs">
+                                <th scope="row" id="home-abbr"></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="seatgeek-info"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10" id="articles"></div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+    <!-- bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- end bootstrap scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
